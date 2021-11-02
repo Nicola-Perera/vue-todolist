@@ -28,10 +28,18 @@
                 <div class="item" v-for="(task, index) in tasks">
                     <div class="task row">
                         
-                        {{task}}
+                        <div v-show="!edit">
+                            {{task}}
+                        </div>
+                        <div v-show="edit">
+                            <input type="text" v-bind:placeholder="task" v-model="editedTask">
+                            <button class="add_button" @click="editTask(index)">edit</button>
+                        </div>
 
-                        <div class="deleteTask">
-                            <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
+                        <div class="optionTask">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-edit" @click="modifyTask(index)"></i>
+                            <i class="fas fa-trash" @click="deleteTask(index)"></i>
                         </div>
 
                     </div>

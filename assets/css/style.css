@@ -53,6 +53,9 @@
     border-bottom: 2px solid grey;
     padding: 1rem;
 }
+.optionTask > i {
+    margin: 0 .5rem;
+}
 
 
 .error {

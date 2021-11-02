@@ -28,11 +28,12 @@ const app = new Vue ({
             "lavare l'auto"
         ],
     newTask: '',
+    edit: false,
     error: false
     },
     methods: {
         deleteTask(i) {
-            this.tasks.splice(i, 1);
+            this.tasks.splice(i, 1,);
         },
         addTask() {
             if (this.newTask.length > 2) {
@@ -42,8 +43,14 @@ const app = new Vue ({
             else {
                 this.error = true
             }
-
             this.newTask = '';
+        },
+        modifyTask() {
+            this.edit = true
+        },
+        editTask(i) {
+            this.tasks.splice(i, 1, this.editedTask);
+            this.edit = false
         }
     }
 })
