@@ -33,6 +33,12 @@ const app = new Vue ({
     methods: {
         deleteTask(i) {
             this.tasks.splice(i, 1);
+        },
+        addTask() {
+            if (this.newTask != '' && this.newTask.length > 2) {
+                this.tasks.push(this.newTask);
+                
+            }
         }
     }
 })
