@@ -12,25 +12,32 @@
     
     <div id="root">
 
-        <div class="addTask">
-            <input type="text" v-model="newTask">
-            <button @click="addTask">Add</button>
-            <div class="error" v-show="error">Inserisci una task di almeno 3 caratteri</div>
-        </div>
+        <div class="container">
 
-        <div class="tasks" v-if="tasks.length > 0">
-            <div class="item" v-for="(task, index) in tasks">
-                {{task}}
+            <div class="logo">
+                <img src="http://boolean.careers/images/misc/logo.png" alt="">
+            </div>
+            
+            <div class="addTask">
+                <input type="text" placeholder="write new task" v-model="newTask">
+                <button class="add_button" @click="addTask">Add</button>
+                <div class="error" v-show="error">Inserisci una task di almeno 3 caratteri</div>
+            </div>
 
-                <div class="deleteTask">
-                    <i class="fas fa-times-circle" @click="deleteTask"></i>
+            <div class="tasks" v-if="tasks.length > 0">
+                <div class="item" v-for="(task, index) in tasks">
+                    {{task}}
+
+                    <div class="deleteTask">
+                        <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div v-else>
-            <p>No tasks remaining</p>
-        </div>
+            <div v-else>
+                <p>No tasks remaining</p>
+            </div>
 
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

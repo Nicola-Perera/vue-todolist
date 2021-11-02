@@ -5,6 +5,40 @@
     padding: 0;
 }
 
+.container {
+    width: 60%;
+    margin: auto;
+}
+
+/* logo */
+.logo {
+    padding: 1rem 4rem;
+    text-align: center;
+}
+.logo > img {
+    width: 80%;
+}
+
+/* inputs */
+.addTask {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+.addTask > input, .addTask > .add_button {
+    height: 50px;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.addTask > input {
+    width: 50%;
+    text-align: center;
+}
+.addTask > .add_button {
+    width: 25%;
+}
+
+
 .error {
     color: red;
 }
