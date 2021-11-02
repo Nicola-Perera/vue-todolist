@@ -29,5 +29,10 @@ const app = new Vue ({
         ],
     newTask: '',
     error: false
+    },
+    methods: {
+        deleteTask(i) {
+            this.tasks.splice(i, 1);
+        }
     }
 })
