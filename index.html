@@ -12,6 +12,11 @@
     
     <div id="root">
 
+        <div class="addTask">
+            <input type="text" v-model="newTask">
+            <button>Add</button>
+        </div>
+
         <div class="tasks">
             <div class="item" v-for="(task, index) in tasks">
                 {{task}}
