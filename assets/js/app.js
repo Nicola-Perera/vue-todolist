@@ -28,6 +28,7 @@ const app = new Vue ({
             "lavare l'auto"
         ],
     newTask: '',
+    editedTask: '',
     edit: false,
     error: false
     },
@@ -50,6 +51,7 @@ const app = new Vue ({
         },
         editTask(i) {
             this.tasks.splice(i, 1, this.editedTask);
+            this.editedTask = '';
             this.edit = false
         }
     }
