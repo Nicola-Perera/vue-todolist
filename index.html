@@ -15,6 +15,7 @@
         <div class="addTask">
             <input type="text" v-model="newTask">
             <button @click="addTask">Add</button>
+            <div class="error" v-show="error">Inserisci una task di almeno 3 caratteri</div>
         </div>
 
         <div class="tasks">

@@ -35,10 +35,15 @@ const app = new Vue ({
             this.tasks.splice(i, 1);
         },
         addTask() {
-            if (this.newTask != '' && this.newTask.length > 2) {
+            if (this.newTask.length > 2) {
                 this.tasks.push(this.newTask);
-                
+                this.error = false
             }
+            else {
+                this.error = true
+            }
+
+            this.newTask = '';
         }
     }
 })
