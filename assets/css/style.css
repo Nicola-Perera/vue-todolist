@@ -5,9 +5,14 @@
     padding: 0;
 }
 
+/* common rules */
 .container {
     width: 60%;
     margin: auto;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* logo */
@@ -21,9 +26,8 @@
 
 /* inputs */
 .addTask {
-    display: flex;
-    justify-content: space-around;
     padding: 0 2rem;
+    margin: 2rem 0;
 }
 .addTask > input, .addTask > .add_button {
     height: 50px;
@@ -36,6 +40,18 @@
 }
 .addTask > .add_button {
     width: 25%;
+}
+
+/* list section */
+.tasks {
+    background-color: #F5F7F7;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+.task {
+    margin: 2rem 0;
+    border-bottom: 2px solid grey;
+    padding: 1rem;
 }
 
 

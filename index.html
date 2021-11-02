@@ -18,19 +18,25 @@
                 <img src="http://boolean.careers/images/misc/logo.png" alt="">
             </div>
             
-            <div class="addTask">
+            <div class="addTask row">
                 <input type="text" placeholder="write new task" v-model="newTask">
                 <button class="add_button" @click="addTask">Add</button>
                 <div class="error" v-show="error">Inserisci una task di almeno 3 caratteri</div>
             </div>
 
-            <div class="tasks" v-if="tasks.length > 0">
+            <div class="tasks " v-if="tasks.length > 0">
                 <div class="item" v-for="(task, index) in tasks">
-                    {{task}}
+                    <div class="task row">
+                        
+                        {{task}}
 
-                    <div class="deleteTask">
-                        <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
+                        <div class="deleteTask">
+                            <i class="fas fa-times-circle" @click="deleteTask(index)"></i>
+                        </div>
+
                     </div>
+
+
                 </div>
             </div>
             <div v-else>
